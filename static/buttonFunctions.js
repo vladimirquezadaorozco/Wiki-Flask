@@ -16,3 +16,13 @@ function scrollToTop() {
     });
   });
 
+  function changeCSS() {
+    var mainCssLink = document.getElementById('main-css');
+    if (mainCssLink.href.includes('index.css')) {
+      mainCssLink.href = "{{url_for('static', filename='alternate.css')}}";
+    } else {
+      mainCssLink.href = "{{url_for('static', filename='index.css')}}";
+    }
+  }
+  
+
